@@ -1,14 +1,26 @@
+using CoffeeStore.Auth.Api.Configuration;
+using CoffeeStore.Auth.Api.Endpoints;
+
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+RegisterServices(builder.Services);
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+RegisterMiddleware(app);
 
 app.Run();
+
+void RegisterServices(IServiceCollection services)
+{
+    services.AddSwagger();
+
+    services.AddJwtConfiguration(builder.Configuration);
+}
+
+void RegisterMiddleware(WebApplication app)
+{
+    app.UseSwagger();
+
+    app.MapUserEndpoints();
+}

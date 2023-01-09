@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeStore.Auth.Api", "src\CoffeeStore.Auth.Api\CoffeeStore.Auth.Api.csproj", "{564B9B0E-49FB-4B9F-B3F6-C088654A4143}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{51A9095E-EF90-4CC0-A062-6C1B78A789E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +20,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{564B9B0E-49FB-4B9F-B3F6-C088654A4143} = {51A9095E-EF90-4CC0-A062-6C1B78A789E7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6E6A0FEE-25CC-4326-AF08-AE5EE44EB6E5}
