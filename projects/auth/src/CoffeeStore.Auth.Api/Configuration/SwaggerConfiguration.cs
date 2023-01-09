@@ -8,7 +8,7 @@ public static class SwaggerConfiguration
         services.AddSwaggerGen();
     }
 
-    public static void UseSwagger(this WebApplication app)
+    public static void UseSwaggerMiddleware(this WebApplication app)
     {
         if (app.Environment.IsDevelopment())
         {

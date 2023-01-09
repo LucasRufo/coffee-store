@@ -20,7 +20,7 @@ void RegisterServices(IServiceCollection services)
 
 void RegisterMiddleware(WebApplication app)
 {
-    app.UseSwagger();
+    app.UseSwaggerMiddleware();
 
     app.MapUserEndpoints();
 }
